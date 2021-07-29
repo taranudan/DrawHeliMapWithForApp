@@ -1,5 +1,5 @@
 
-public class DrawHeliMapWithForApp {
+public class DrawHeliMapWithForApp2 {
 
 	public static void main(String[] args) {
 		
@@ -21,13 +21,12 @@ public class DrawHeliMapWithForApp {
 				//Helicopter position
 				else if (x == hX && y == hY) {
 					System.out.print("H ");
-				}
+				}				
 				
-				// The region marked with x
-				else if ((x >= hX - 1 && x <= hX + 1 && y >= hY - 1 && y <= hY + 1) || (((x == hX - 2) || (x == hX + 2)) && y == hY)) {
-					System.out.print("x ");
+				// Zone of increased noise
+				else if ((x >= hX - 1 && x <= hX + 1 && y >= hY - 2 && y <= hY + 2) || (x >= hX - 2 && x <= hX + 2 && y >= hY - 1 && y <= hY + 1)) {
+					System.out.print("~ ");
 				}
-
 				else {
 					System.out.print("  ");
 				}
